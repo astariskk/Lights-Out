@@ -107,7 +107,7 @@ function checkWinCondition() {
     if (complete) {
         document.getElementById("mainGame").innerHTML = `
             <h2 class="centerTitle">PUZZLE SOLVED!</h2>
-            <p class="centerTitle">The map is 3533.</p>
+            <p class="centerTitle">The map is 3353.</p>
         `;
     }
 }

@@ -112,7 +112,7 @@ function checkWinCondition() {
     if (complete) {
         document.getElementById("mainGame").innerHTML = `
             <h2 class="centerTitle" style="color:#10b981;">PUZZLE SOLVED!</h2>
-            <p class="centerTitle">Room number is 2025</p>
+            <p class="centerTitle">Room number is 68791</p>
         `;
         document.getElementById("controls").style.display = 'none';
         document.removeEventListener("keydown", handleMove);

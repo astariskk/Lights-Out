@@ -1,79 +1,92 @@
-/* ===== GLOBAL ===== */
 body {
     margin: 0;
     padding: 0;
-    background: #111;
-    color: white;
-    font-family: Arial, sans-serif;
+    background: #1a1a1a; 
+    color: #e5e5e5;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    padding-top: 40px;
 }
 
-#screen-container {
-    width: max-content;
+#game-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background: #2b2b2b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.screen {
+.centerTitle {
     text-align: center;
+    margin: 8px 0;
 }
 
-.hidden {
-    display: none;
+#sokoban-grid {
+    border: 4px solid #666;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 button {
     padding: 12px 20px;
-    background: #4caf50;
+    background: #3b82f6;
     border: none;
     border-radius: 6px;
     color: white;
     cursor: pointer;
     font-size: 18px;
-    margin: 10px;
+    margin: 6px;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px #2f69c5;
 }
 
 button:hover {
-    background: #45a049;
+    background: #2f69c5;
 }
 
-/* ===== SCENARIO 3 — LIGHTS OUT ===== */
-
-.scenario-3-bg {
-    /* Example color for Lights Out - e.g., Dark Green/Black for a puzzle grid */
-    background-color: #1f381f;
-    transition: background-color 0.5s;
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #2f69c5;
 }
 
-#lights-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 70px);
-    grid-gap: 8px;
-    justify-content: center;
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
-}
-
-.light-cell {
-    width: 70px;
-    height: 70px;
-    background: #222;
+    padding: 10px;
+    background: #3a3a3a;
     border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
 }
 
-.light-on {
-    background: #ffe066;
-    box-shadow: 0 0 15px #ffea85;
+#controls > div {
+    display: flex;
+    justify-content: center;
 }
 
-/* Win message styling */
+#controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#controls div:nth-child(1) button,
+#controls div:nth-child(3) button {
+    margin: 4px 60px;
+}
+
 .win-msg {
     font-size: 22px;
     margin-top: 15px;
-    color: #85ff9e;
-}
-
-/* Centered title for scenario 3 */
-.centerTitle {
-    text-align: center;
+    color: #bfbfbf;
 }

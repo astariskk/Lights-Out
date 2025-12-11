@@ -1,24 +1,35 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lights Out Puzzle</title>
-
+    <title>Sokoban Puzzle Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Scenario 3 container -->
-    <div id="mainGame"></div>
+    <div id="game-wrapper">
+        <!-- Game area where the board is rendered -->
+        <div id="mainGame"></div>
 
-    <!-- Load scenario 3 script -->
-    <script src="game.js"></script>
+        <!-- Controls for touch/mouse interaction -->
+        <div id="controls" class="centerTitle">
+            <div>
+                <button onclick="movePlayer(-1, 0)"></button>
+            </div>
+            <div>
+                <button onclick="movePlayer(0, -1)"></button>
+                <button onclick="movePlayer(0, 1)"></button>
+            </div>
+            <div>
+                <button onclick="movePlayer(1, 0)"></button>
+            </div>
+        </div>
+    </div>
 
-    <!-- Start the game immediately -->
-    <script>
-        initmainGame();
-    </script>
+<script src="game.js"></script>
 
 </body>
 </html>

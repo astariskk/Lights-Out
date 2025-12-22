@@ -1,4 +1,4 @@
-const GRID_SIZE = 11;
+const GRID_SIZE = 9;
 
 let board = [];
 let goals = [];
@@ -6,17 +6,16 @@ let playerPos = { r: 0, c: 0 };
 
 function initmainGame() {
     const level = [
-        "###########",
-        "##  . .####",
-        "#.   B ####",
-        "##  B  ####",                
-        "###  BB####",
-        "##. BBP ###",
-        "##.  BB   #",
-        "##  ##   ##",
-        "##. #.. ###",
-        "###########",
-        "###########",        
+        "#########",
+        "###   ###",
+        "#.PB  ###",
+        "### B.###",
+        "#.##B ###",
+        "# # . ###",
+        "#B.BBB.##",   
+        "#   .  ##",                                 
+        "#########"        
+      
     ];
 
     board = level.map(row => row.split(""));
@@ -114,7 +113,7 @@ function checkWinCondition() {
     if (complete) {
         document.getElementById("mainGame").innerHTML = `
             <h2 class="centerTitle" style="color:#10b981;">PUZZLE SOLVED!</h2>
-            <p class="centerTitle">Room number is 45645</p>
+            <p class="centerTitle">Room number is 75632</p>
         `;
         document.getElementById("controls").style.display = 'none';
         document.removeEventListener("keydown", handleMove);

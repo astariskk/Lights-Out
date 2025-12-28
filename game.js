@@ -1,14 +1,13 @@
 const levelLayout = [
-    "BBRRBBRYYG",
-    "BYYGGGBGRG",
-    "RRBGRYGGRR",
-    "RBBYRYRBBR",
-    "RYGBBYRBYG",
-    "YGGRRGGBGR",
-    "BRYYGBRYYG",
-    "BGGYBBRYGG",
-    "BBYYGRRYYG",    
-    "BGGYRRBBYG"
+    "YGGYGRRYY",
+    "YBBGGBGBG",
+    "RGGBRRGBG",
+    "RBRGYGBGY",
+    "GGYYYYYGG",
+    "YGBGYGRBR",
+    "GBGRRGBGR", 
+    "GBGBGGBBY",  
+    "YYRRGYGGY"
 ];
 
 const GRID_SIZE = levelLayout.length;
@@ -38,7 +37,7 @@ const sounds = {
 /* ---------------- INIT ---------------- */
 function initGame() {
     grid = levelLayout.map(row => row.split(""));
-    movesLeft = 8;
+    movesLeft = 6;
     selectedColor = 'R';
     renderGrid();
     renderControls();
@@ -162,7 +161,7 @@ function checkWin() {
         const container = document.getElementById("game-wrapper");
         container.innerHTML = `
             <h2 class="centerTitle" style="color:#10b981;">🎉 PUZZLE SOLVED! 🎉</h2>
-            <p class="centerTitle">Room number is 3533</p>
+            <p class="centerTitle">Room number is 35337</p>
             <button onclick="location.reload()">Play Again</button>
         `;
     } else if (movesLeft <= 0) {
